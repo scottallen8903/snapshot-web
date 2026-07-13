@@ -36,7 +36,7 @@ export default function Home() {
           Auto-tracked.
         </h1>
         <p className="mb-10 max-w-2xl text-lg leading-relaxed text-ink-soft md:text-xl">
-          SnapShot uses AI to record, track, and clip your grassroots football matches — highlights and tactical breakdowns ready by full-time.
+          SnapShot uses tracking technology to record and clip your grassroots football matches, highlight key moments and record tactical breakdowns - ready to review by full-time.
         </p>
         <div className="flex flex-col gap-3 sm:flex-row">
           <a href="#waitlist" className="rounded-full bg-brand px-8 py-4 font-display text-base font-semibold uppercase tracking-wider text-ink transition hover:bg-brand-hover">Join the Waitlist</a>
@@ -47,9 +47,9 @@ export default function Home() {
       {/* Value strip */}
       <section className="border-y border-line bg-card py-8">
         <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 px-6 md:grid-cols-3">
-          <ValueItem label="Handsfree mobile phone" sub="Mount it. Hit record. Coach the match." />
+          <ValueItem label="Handsfree mobile phone" sub="Mount it. Hit play. Recordthe match." />
           <ValueItem label="Ready by full-time" sub="Highlights and clips waiting when the whistle blows." />
-          <ValueItem label="Built for grassroots" sub="U8s to Sunday League. Not just the pros." />
+          <ValueItem label="Built for grassroots" sub="Perfect for U8s to Sunday League. Not just the pros." />
         </div>
       </section>
 
@@ -80,14 +80,14 @@ export default function Home() {
             n="02"
             icon={<Zap className="h-6 w-6" />}
             title="Track"
-            body="Get highlights and tactical clips ready before you leave the ground. Send them to players, coaches, and parents in one tap."
+            body="Get highlights and tactical clips ready before you leave the ground. Send them to players, coaches, and supporters in one tap."
             delay={0.15}
           />
           <Step
             n="03"
             icon={<Share2 className="h-6 w-6" />}
             title="Share"
-            body="Players, coaches, and parents get instant access to every replay — no more waiting for files to be sent."
+            body="Players, coaches, and supporters get instant access to every replay - no more waiting for files to be sent."
             delay={0.3}
           />
         </div>
@@ -114,22 +114,6 @@ export default function Home() {
           </motion.div>
 
           <div className="relative mx-auto flex max-w-5xl items-center justify-center">
-            {/* Feature callouts - left side */}
-            <div className="hidden flex-col gap-6 lg:flex lg:w-64">
-              <Callout
-                title="Auto-tracked camera"
-                body="Follows the ball across the pitch automatically."
-                delay={0.2}
-                align="right"
-              />
-              <Callout
-                title="Highlight detection"
-                body="Every goal, chance, and turnover — flagged."
-                delay={0.4}
-                align="right"
-              />
-            </div>
-
             {/* Phone showcase */}
             <motion.div
               initial={{ opacity: 0, scale: 0.92 }}
@@ -150,30 +134,6 @@ export default function Home() {
                 className="relative drop-shadow-2xl"
               />
             </motion.div>
-
-            {/* Feature callouts - right side */}
-            <div className="hidden flex-col gap-6 lg:flex lg:w-64">
-              <Callout
-                title="Voice-note coaching"
-                body="Talk over any clip. Send it to a player."
-                delay={0.3}
-                align="left"
-              />
-              <Callout
-                title="Tactical breakdowns"
-                body="Draw on the pitch. Save. Share."
-                delay={0.5}
-                align="left"
-              />
-            </div>
-          </div>
-
-          {/* Mobile-only callouts */}
-          <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:hidden">
-            <Callout title="Auto-tracked camera" body="Follows the ball across the pitch automatically." delay={0} align="right" />
-            <Callout title="Highlight detection" body="Every goal, chance, and turnover — flagged." delay={0} align="right" />
-            <Callout title="Voice-note coaching" body="Talk over any clip. Send it to a player." delay={0} align="right" />
-            <Callout title="Tactical breakdowns" body="Draw on the pitch. Save. Share." delay={0} align="right" />
           </div>
         </div>
       </section>
@@ -195,7 +155,7 @@ export default function Home() {
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           <Feature icon={<Video className="h-5 w-5" />} title="Auto camera tracking" body="AI follows the ball across the pitch. No manual panning. No missed action." delay={0} />
           <Feature icon={<Target className="h-5 w-5" />} title="Ball & player detection" body="Every touch, every run, tracked and timestamped for later review." delay={0.05} />
-          <Feature icon={<Sparkles className="h-5 w-5" />} title="Highlight detection" body="Goals, saves, chances, turnovers — auto-clipped and ready to share." delay={0.1} />
+          <Feature icon={<Sparkles className="h-5 w-5" />} title="Highlight detection" body="Goals, saves, chances, turnovers - auto-clipped and ready to share." delay={0.1} />
           <Feature icon={<Mic className="h-5 w-5" />} title="Voice coaching" body="Record voice notes over any clip. Send them straight to your players." delay={0.15} />
           <Feature icon={<PenLine className="h-5 w-5" />} title="Tactical drawing" body="Draw runs, spaces, and shapes directly on any frame." delay={0.2} />
           <Feature icon={<Cloud className="h-5 w-5" />} title="Cloud storage" body="Every match saved and searchable. Season-long review, not just match day." delay={0.25} />
@@ -215,7 +175,7 @@ export default function Home() {
               <div className="flex h-16 w-16 items-center justify-center rounded-full bg-brand font-display text-2xl font-bold text-ink">S</div>
               <div>
                 <div className="font-display text-lg font-semibold uppercase tracking-wider text-ink">Scott Allen</div>
-                <div className="text-sm text-ink-soft">Founder — SnapShot</div>
+                <div className="text-sm text-ink-soft">Founder - SnapShot</div>
               </div>
             </div>
 
@@ -247,7 +207,7 @@ export default function Home() {
             It shouldn&apos;t.
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-ink-soft">
-            The pros bought their hardware and locked in subscriptions. Grassroots coaches shouldn&apos;t have to. SnapShot uses the phone in your pocket — that&apos;s the whole idea.
+            The pros bought their hardware and locked in subscriptions. Grassroots coaches shouldn&apos;t have to. SnapShot uses the phone in your pocket - that&apos;s the whole idea.
           </p>
         </motion.div>
 
@@ -280,7 +240,7 @@ export default function Home() {
               </tr>
             </thead>
             <tbody className="text-sm">
-              <CompareRow label="Hardware to buy" values={["£0 — use your phone", "£500+", "£300+", "£1,000+"]} />
+              <CompareRow label="Hardware to buy" values={["£0 - use your phone", "£500+", "£300+", "£1,000+"]} />
               <CompareRow label="Monthly subscription" values={["From £10", "£33 – £75", "~£23", "Enterprise"]} />
               <CompareRow label="Year 1 total cost" values={["£120", "£900+", "£576+", "£1,600+"]} highlight />
               <CompareRow label="3-year total cost" values={["£360", "£2,300+", "£1,128+", "£4,600+"]} highlight />
@@ -359,13 +319,13 @@ export default function Home() {
         </motion.div>
 
         <div className="space-y-3">
-          <FaqItem q="What phone do I need?" a="Any modern Android or iPhone from the last four years or so. SnapShot is built for phones like the Samsung Galaxy S22+ or iPhone 12+. The higher the camera quality, the better the tracked output — but it works with what you already have." />
+          <FaqItem q="What phone do I need?" a="Any modern Android or iPhone from the last four years or so. SnapShot is built for phones like the Samsung Galaxy S22+ or iPhone 12+. The higher the camera quality, the better the tracked output - but it works with what you already have." />
           <FaqItem q="Do I need wifi at the pitch?" a="No. Recording happens on the phone locally. Uploads to the cloud happen in the background whenever you next have a wifi or mobile signal. Perfect for the middle-of-nowhere Sunday League pitches." />
           <FaqItem q="Will the battery last a full 90 minutes?" a="Yes on most modern phones. For tournaments or double-headers, a small power bank plugged in during play keeps you going indefinitely." />
-          <FaqItem q="What if I only have one phone?" a="No worries — unlike other tracking apps, SnapShot works brilliantly as a standalone single-phone app. Mount your phone on the sideline and you're ready to go. There's also an optional two-phone mode if you want a wider panorama, but single-phone is the main experience." />
-          <FaqItem q="Can I edit the highlights it makes?" a="Absolutely. Trim, rename, add voice notes, draw on frames, and stitch multiple clips together. Everything is customisable — SnapShot's job is to give you a great starting point, not lock you in." />
+          <FaqItem q="What if I only have one phone?" a="No worries - unlike other tracking apps, SnapShot works brilliantly as a standalone single-phone app. Mount your phone on the sideline and you're ready to go. There's also an optional two-phone mode if you want a wider panorama, but single-phone is the main experience." />
+          <FaqItem q="Can I edit the highlights it makes?" a="Absolutely. Trim, rename, add voice notes, draw on frames, and stitch multiple clips together. Everything is customisable - SnapShot's job is to give you a great starting point, not lock you in." />
           <FaqItem q="Is my match footage private?" a="Yes, private by default. Only the team members you explicitly invite can view your matches. Nothing is shared publicly unless you choose to." />
-         <FaqItem q="Is it free for players and parents?" a="Yes. Teams pay a small monthly fee, but the app is completely free for players and parents to access their team's highlights, clips, and full match footage. Only the coach or manager pays." />
+         <FaqItem q="Is it free for players and supporters?" a="Yes. Teams pay a small monthly fee, but the app is completely free for players and supporters to access their team's highlights, clips, and full match footage. Only the coach or manager pays." />
         <FaqItem q="When does it launch?" a="Beta is targeted for late 2026 with a full launch shortly after. Join the waitlist and you'll be first to use the app when we go live." />
         </div>
       </section>
@@ -387,7 +347,7 @@ export default function Home() {
             Be the first to use SnapShot when we launch. Priority access and a launch-day heads-up.
           </p>
           <WaitlistForm />
-          <p className="mt-4 text-xs text-ink-muted">No spam. Unsubscribe anytime. We&apos;ll email you once — when it&apos;s time.</p>
+          <p className="mt-4 text-xs text-ink-muted">No spam. Unsubscribe anytime. We&apos;ll email you once - when it&apos;s time.</p>
         </motion.div>
       </section>
 
