@@ -2,12 +2,24 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { motion } from "motion/react";
+import { motion, useScroll, useSpring } from "motion/react";
 import { Camera, Zap, Share2, Video, Target, Sparkles, Mic, PenLine, Cloud, Check } from "lucide-react";
 
 export default function Home() {
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
+
   return (
     <main className="min-h-screen bg-bg">
+      <motion.div
+        className="fixed left-0 right-0 top-0 z-50 h-1 origin-left bg-brand"
+        style={{ scaleX }}
+      />
+      ...
       {/* Nav */}
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
         <Image src="/logo-wordmark.png" alt="SnapShot" width={180} height={45} priority />
