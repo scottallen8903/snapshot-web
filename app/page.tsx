@@ -129,7 +129,7 @@ export default function Home() {
               />
             </div>
 
-            {/* Phone mockup */}
+            {/* Phone showcase */}
             <motion.div
               initial={{ opacity: 0, scale: 0.92 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -138,28 +138,16 @@ export default function Home() {
               className="relative mx-8"
             >
               {/* Green glow behind phone */}
-              <div className="absolute inset-0 -z-10 mx-auto h-full w-full rounded-[60px] bg-brand opacity-20 blur-3xl" />
+              <div className="absolute inset-0 -z-10 mx-auto h-full w-full rounded-[60px] bg-brand opacity-25 blur-3xl" />
 
-              <div className="relative rounded-[48px] border-8 border-ink bg-ink p-2 shadow-2xl">
-                <div className="relative aspect-[9/19] w-64 overflow-hidden rounded-[36px] bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 md:w-72">
-                  {/* Placeholder pitch */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="flex h-full w-full flex-col items-center justify-center bg-[radial-gradient(ellipse_at_center,_#166534_0%,_#052e16_70%)] p-6 text-center">
-                      <div className="mb-3 h-1 w-16 rounded-full bg-brand/60" />
-                      <div className="font-display text-xs font-semibold uppercase tracking-widest text-white/80">Match Playing</div>
-                      <div className="mt-2 font-display text-4xl font-bold text-white">2 - 1</div>
-                      <div className="mt-1 text-xs text-white/60">Preston vs Newquay</div>
-                      <div className="mt-8 flex items-center gap-2 rounded-full bg-white/10 px-3 py-1.5 backdrop-blur">
-                        <div className="h-2 w-2 animate-pulse rounded-full bg-brand" />
-                        <div className="text-xs text-white/80">Tracking</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Notch */}
-                  <div className="absolute left-1/2 top-2 h-6 w-24 -translate-x-1/2 rounded-full bg-ink" />
-                </div>
-              </div>
+              <Image
+                src="/example-footage.png"
+                alt="SnapShot showing Southport 1st vs Tarleton 2nd match with auto-generated highlights"
+                width={320}
+                height={640}
+                priority
+                className="relative drop-shadow-2xl"
+              />
             </motion.div>
 
             {/* Feature callouts - right side */}
