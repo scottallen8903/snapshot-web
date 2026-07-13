@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "motion/react";
-import { Camera, Zap, Share2 } from "lucide-react";
+import { Camera, Zap, Share2, Video, Target, Sparkles, Mic, PenLine, Cloud } from "lucide-react";
 
 export default function Home() {
   return (
@@ -175,6 +175,60 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* Feature grid */}
+      <section id="features" className="mx-auto max-w-6xl px-6 py-32">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="mb-20 text-center"
+        >
+          <span className="mb-4 inline-block rounded-full border border-line bg-card px-4 py-1.5 font-display text-xs font-semibold uppercase tracking-widest text-ink-soft">What's inside</span>
+          <h2 className="mx-auto max-w-3xl font-display text-4xl font-bold uppercase leading-tight tracking-tight text-ink md:text-6xl">
+            More than a camera. <span className="text-brand">A whole analysis kit.</span>
+          </h2>
+        </motion.div>
+
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <Feature icon={<Video className="h-5 w-5" />} title="Auto camera tracking" body="AI follows the ball across the pitch. No manual panning. No missed action." delay={0} />
+          <Feature icon={<Target className="h-5 w-5" />} title="Ball & player detection" body="Every touch, every run, tracked and timestamped for later review." delay={0.05} />
+          <Feature icon={<Sparkles className="h-5 w-5" />} title="Highlight detection" body="Goals, saves, chances, turnovers — auto-clipped and ready to share." delay={0.1} />
+          <Feature icon={<Mic className="h-5 w-5" />} title="Voice coaching" body="Record voice notes over any clip. Send them straight to your players." delay={0.15} />
+          <Feature icon={<PenLine className="h-5 w-5" />} title="Tactical drawing" body="Draw runs, spaces, and shapes directly on any frame." delay={0.2} />
+          <Feature icon={<Cloud className="h-5 w-5" />} title="Cloud storage" body="Every match saved and searchable. Season-long review, not just match day." delay={0.25} />
+        </div>
+      </section>
+
+      {/* Founder story */}
+      <section className="border-y border-line bg-card py-32">
+        <div className="mx-auto max-w-4xl px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="mb-8 flex items-center gap-4">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-brand font-display text-2xl font-bold text-ink">S</div>
+              <div>
+                <div className="font-display text-lg font-semibold uppercase tracking-wider text-ink">Scott Allen</div>
+                <div className="text-sm text-ink-soft">Founder — SnapShot</div>
+              </div>
+            </div>
+
+            <blockquote className="font-display text-2xl leading-relaxed text-ink md:text-3xl">
+              &ldquo;Grassroots football deserves the same tools the pros have. I built SnapShot because I was tired of coaches paying hundreds for analysis kits that were never designed for us. <span className="text-brand">One phone should be enough.</span>&rdquo;
+            </blockquote>
+
+            <div className="mt-8 flex flex-wrap gap-3">
+              <span className="rounded-full border border-line bg-bg px-4 py-1.5 text-sm text-ink-soft">Solo developer</span>
+              <span className="rounded-full border border-line bg-bg px-4 py-1.5 text-sm text-ink-soft">Grassroots coach</span>
+              <span className="rounded-full border border-line bg-bg px-4 py-1.5 text-sm text-ink-soft">Building in public</span>
+            </div>
+          </motion.div>
+        </div>
+      </section>
     </main>
   );
 }
@@ -222,6 +276,22 @@ function Callout({ title, body, delay, align }: { title: string; body: string; d
         {align === "right" && <div className="h-1.5 w-1.5 rounded-full bg-brand" />}
       </div>
       <div className="text-sm text-ink-soft">{body}</div>
+    </motion.div>
+  );
+}
+
+function Feature({ icon, title, body, delay }: { icon: React.ReactNode; title: string; body: string; delay: number }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-60px" }}
+      transition={{ duration: 0.5, delay, ease: "easeOut" }}
+      className="group rounded-2xl border border-line bg-card p-6 transition hover:border-brand hover:shadow-[0_0_30px_-10px_rgba(0,230,118,0.35)]"
+    >
+      <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-bg text-ink transition group-hover:bg-brand">{icon}</div>
+      <h3 className="mb-2 font-display text-lg font-semibold uppercase tracking-wider text-ink">{title}</h3>
+      <p className="text-sm leading-relaxed text-ink-soft">{body}</p>
     </motion.div>
   );
 }
