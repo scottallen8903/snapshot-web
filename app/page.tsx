@@ -105,8 +105,8 @@ export default function Home() {
           >
             <span className="mb-4 inline-block rounded-full border border-line bg-card px-4 py-1.5 font-display text-xs font-semibold uppercase tracking-widest text-ink-soft">See it in action</span>
             <h2 className="mx-auto max-w-3xl font-display text-4xl font-bold uppercase leading-tight tracking-tight text-ink md:text-6xl">
-              Raw footage in.<br />
-              <span className="text-brand">Ready-to-share highlights</span> out.
+              Live footage in.<br />
+              <span className="text-brand">Replay and highlights</span> out.
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-ink-soft">
               Watch how SnapShot turns a full 90 minutes on the sideline into the moments that actually matter.
@@ -148,12 +148,12 @@ export default function Home() {
         >
           <span className="mb-4 inline-block rounded-full border border-line bg-card px-4 py-1.5 font-display text-xs font-semibold uppercase tracking-widest text-ink-soft">What's inside</span>
           <h2 className="mx-auto max-w-3xl font-display text-4xl font-bold uppercase leading-tight tracking-tight text-ink md:text-6xl">
-            More than a camera. <span className="text-brand">A whole analysis kit.</span>
+            More than a camera. <span className="text-brand">A full review tool.</span>
           </h2>
         </motion.div>
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          <Feature icon={<Video className="h-5 w-5" />} title="Auto camera tracking" body="AI follows the ball across the pitch. No manual panning. No missed action." delay={0} />
+          <Feature icon={<Video className="h-5 w-5" />} title="Live streaming & auto-tracking" body="Live stream to your supporters, while automatically tracking the action." delay={0} />
           <Feature icon={<Target className="h-5 w-5" />} title="Ball & player detection" body="Every touch, every run, tracked and timestamped for later review." delay={0.05} />
           <Feature icon={<Sparkles className="h-5 w-5" />} title="Highlight detection" body="Goals, saves, chances, turnovers - auto-clipped and ready to share." delay={0.1} />
           <Feature icon={<Mic className="h-5 w-5" />} title="Voice coaching" body="Record voice notes over any clip. Send them straight to your players." delay={0.15} />
@@ -180,14 +180,8 @@ export default function Home() {
             </div>
 
             <blockquote className="font-display text-2xl leading-relaxed text-ink md:text-3xl">
-              &ldquo;Grassroots football deserves the same tools the pros have. I built SnapShot because I was tired of coaches paying hundreds for sports cameras that were never designed for us. <span className="text-brand">One phone should be enough.</span>&rdquo;
+              &ldquo;Grassroots football deserves the same tools the pros have. I built SnapShot because I was tired of coaches paying hundreds for sports cameras that were inaccessable for smaller clubs. <span className="text-brand">One phone should be enough.</span>&rdquo;
             </blockquote>
-
-            <div className="mt-8 flex flex-wrap gap-3">
-              <span className="rounded-full border border-line bg-bg px-4 py-1.5 text-sm text-ink-soft">Solo developer</span>
-              <span className="rounded-full border border-line bg-bg px-4 py-1.5 text-sm text-ink-soft">Grassroots coach</span>
-              <span className="rounded-full border border-line bg-bg px-4 py-1.5 text-sm text-ink-soft">Building in public</span>
-            </div>
           </motion.div>
         </div>
       </section>
@@ -203,11 +197,11 @@ export default function Home() {
         >
           <span className="mb-4 inline-block rounded-full border border-line bg-card px-4 py-1.5 font-display text-xs font-semibold uppercase tracking-widest text-ink-soft">The price problem</span>
           <h2 className="mx-auto max-w-3xl font-display text-4xl font-bold uppercase leading-tight tracking-tight text-ink md:text-6xl">
-            Match analysis costs <span className="text-brand">£1,000+ a season.</span><br />
+            Match recording costs <span className="text-brand">£1,000+ a season.</span><br />
             It shouldn&apos;t.
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-ink-soft">
-            The pros bought their hardware and locked in subscriptions. Grassroots coaches shouldn&apos;t have to. SnapShot uses the phone in your pocket - that&apos;s the whole idea.
+            The pros pay thousands for kit. Grassroots coaches shouldn&apos;t have to. SnapShot uses the phone in your pocket - same footage, a fraction of the cost.
           </p>
         </motion.div>
 
@@ -294,7 +288,7 @@ export default function Home() {
             Save <span className="text-brand">£2,000+</span> vs Veo
           </div>
           <p className="mx-auto mt-4 max-w-xl text-ink-soft">
-            Same auto-tracking. Same highlight detection. Same cloud storage. Without the price tag or the hardware that lives in your boot.
+            Auto tracking. Highlight detection. Cloud storage. Without the price tag or the hardware that gets left at home.
           </p>
         </motion.div>
 
@@ -319,14 +313,14 @@ export default function Home() {
         </motion.div>
 
         <div className="space-y-3">
-          <FaqItem q="What phone do I need?" a="Any modern Android or iPhone from the last four years or so. SnapShot is built for phones like the Samsung Galaxy S22+ or iPhone 12+. The higher the camera quality, the better the tracked output - but it works with what you already have." />
+          <FaqItem q="What phone do I need?" a="Any modern Android or iPhone from the last four years. SnapShot is built for phones like the Samsung Galaxy S22+ or iPhone 12+. The higher the camera quality, the better the tracked output." />
           <FaqItem q="Do I need wifi at the pitch?" a="No. Recording happens on the phone locally. Uploads to the cloud happen in the background whenever you next have a wifi or mobile signal. Perfect for the middle-of-nowhere Sunday League pitches." />
           <FaqItem q="Will the battery last a full 90 minutes?" a="Yes on most modern phones. For tournaments or double-headers, a small power bank plugged in during play keeps you going indefinitely." />
-          <FaqItem q="What if I only have one phone?" a="No worries - unlike other tracking apps, SnapShot works brilliantly as a standalone single-phone app. Mount your phone on the sideline and you're ready to go. There's also an optional two-phone mode if you want a wider panorama, but single-phone is the main experience." />
+          <FaqItem q="What if I only have one phone?" a="No worries - For the best experience, two phones are recommended, which will enable full pitch coverage. Unlike other tracking cameras, you have the ability to use a single phone for own half footage and training." />
           <FaqItem q="Can I edit the highlights it makes?" a="Absolutely. Trim, rename, add voice notes, draw on frames, and stitch multiple clips together. Everything is customisable - SnapShot's job is to give you a great starting point, not lock you in." />
-          <FaqItem q="Is my match footage private?" a="Yes, private by default. Only the team members you explicitly invite can view your matches. Nothing is shared publicly unless you choose to." />
-         <FaqItem q="Is it free for players and supporters?" a="Yes. Teams pay a small monthly fee, but the app is completely free for players and supporters to access their team's highlights, clips, and full match footage. Only the coach or manager pays." />
-        <FaqItem q="When does it launch?" a="Beta is targeted for late 2026 with a full launch shortly after. Join the waitlist and you'll be first to use the app when we go live." />
+          <FaqItem q="Is my match footage private?" a="Only the members you invite to your team can view matches and highlights. Nothing is shared publicly unless you choose to." />
+         <FaqItem q="Is it free for players and supporters?" a="Yes. Teams pay a small monthly fee, but the app is completely free for players and supporters to access their team's highlights, clips, and full match footage." />
+        <FaqItem q="When does it launch?" a="Join the waitlist and you'll be first to use the app when we go live." />
         </div>
       </section>
 
@@ -344,7 +338,7 @@ export default function Home() {
             Be first on the pitch. <span className="text-brand">Join the waitlist.</span>
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg text-ink-soft">
-            Be the first to use SnapShot when we launch. Priority access and a launch-day heads-up.
+            Be the first to use SnapShot with priority access and a launch-day heads-up.
           </p>
           <WaitlistForm />
           <p className="mt-4 text-xs text-ink-muted">No spam. Unsubscribe anytime. We&apos;ll email you once - when it&apos;s time.</p>
