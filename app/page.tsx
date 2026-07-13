@@ -1,8 +1,9 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import { motion } from "motion/react";
-import { Camera, Zap, Share2, Video, Target, Sparkles, Mic, PenLine, Cloud } from "lucide-react";
+import { Camera, Zap, Share2, Video, Target, Sparkles, Mic, PenLine, Cloud, Check } from "lucide-react";
 
 export default function Home() {
   return (
@@ -229,6 +230,35 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+
+      {/* Waitlist */}
+      <section id="waitlist" className="mx-auto max-w-4xl px-6 py-32">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="rounded-3xl border border-line bg-card p-10 text-center shadow-sm md:p-16"
+        >
+          <span className="mb-4 inline-block rounded-full border border-line bg-bg px-4 py-1.5 font-display text-xs font-semibold uppercase tracking-widest text-ink-soft">Get early access</span>
+          <h2 className="mx-auto max-w-3xl font-display text-4xl font-bold uppercase leading-tight tracking-tight text-ink md:text-6xl">
+            Be first on the pitch. <span className="text-brand">Join the waitlist.</span>
+          </h2>
+          <p className="mx-auto mt-6 max-w-xl text-lg text-ink-soft">
+            Get the launch code, priority access, and a founding-member discount when SnapShot goes live.
+          </p>
+          <WaitlistForm />
+          <p className="mt-4 text-xs text-ink-muted">No spam. Unsubscribe anytime. We&apos;ll email you once — when it&apos;s time.</p>
+        </motion.div>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t border-line bg-card py-10">
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 md:flex-row">
+          <Image src="/logo-wordmark.png" alt="SnapShot" width={130} height={32} />
+          <div className="text-sm text-ink-muted">© 2026 SnapShot. Built for grassroots football.</div>
+        </div>
+      </footer>
     </main>
   );
 }
@@ -293,5 +323,74 @@ function Feature({ icon, title, body, delay }: { icon: React.ReactNode; title: s
       <h3 className="mb-2 font-display text-lg font-semibold uppercase tracking-wider text-ink">{title}</h3>
       <p className="text-sm leading-relaxed text-ink-soft">{body}</p>
     </motion.div>
+  );
+}
+
+function WaitlistForm() {
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [errorMsg, setErrorMsg] = useState("");
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setStatus("loading");
+    setErrorMsg("");
+    const formId = process.env.NEXT_PUBLIC_KIT_FORM_ID;
+    if (!formId) {
+      setStatus("error");
+      setErrorMsg("Form is temporarily unavailable. Please try again shortly.");
+      return;
+    }
+    try {
+      const res = await fetch(`https://app.kit.com/forms/${formId}/subscriptions`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email_address: email }),
+      });
+      if (!res.ok) throw new Error("Signup failed");
+      setStatus("success");
+      setEmail("");
+    } catch {
+      setStatus("error");
+      setErrorMsg("Something went wrong. Please try again.");
+    }
+  }
+
+  if (status === "success") {
+    return (
+      <div className="mx-auto mt-10 max-w-lg rounded-2xl border-2 border-brand bg-brand/5 p-8">
+        <div className="mb-3 flex justify-center">
+          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-brand text-ink">
+            <Check className="h-6 w-6" strokeWidth={3} />
+          </div>
+        </div>
+        <div className="font-display text-xl font-bold uppercase tracking-wider text-ink">You&apos;re in.</div>
+        <div className="mt-2 text-ink-soft">We&apos;ll be in touch when SnapShot launches.</div>
+      </div>
+    );
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="mx-auto mt-10 flex max-w-lg flex-col gap-3 sm:flex-row">
+      <input
+        type="email"
+        required
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        placeholder="you@yourclub.com"
+        disabled={status === "loading"}
+        className="flex-1 rounded-full border border-line bg-bg px-6 py-4 text-ink placeholder:text-ink-muted focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/30 disabled:opacity-50"
+      />
+      <button
+        type="submit"
+        disabled={status === "loading"}
+        className="rounded-full bg-brand px-8 py-4 font-display text-base font-semibold uppercase tracking-wider text-ink transition hover:bg-brand-hover disabled:opacity-50"
+      >
+        {status === "loading" ? "Joining..." : "Join Waitlist"}
+      </button>
+      {status === "error" && (
+        <div className="w-full text-sm text-red-500">{errorMsg}</div>
+      )}
+    </form>
   );
 }
