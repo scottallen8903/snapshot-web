@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://snapshot-web-teal.vercel.app/sitemap.xml",
+    sitemap: "https://www.snapshotsportscam.com/sitemap.xml",
   };
 }

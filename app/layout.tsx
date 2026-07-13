@@ -14,7 +14,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://snapshot-web-teal.vercel.app"),
+  metadataBase: new URL("https://www.snapshotsportscam.com"),
   title: {
     default: "SnapShot — AI video analysis for grassroots football",
     template: "%s | SnapShot",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_GB",
-    url: "https://snapshot-web-teal.vercel.app",
+    url: "https://www.snapshotsportscam.com",
     siteName: "SnapShot",
     title: "SnapShot — AI video analysis for grassroots football",
     description:

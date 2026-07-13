@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: "https://snapshot-web-teal.vercel.app",
+      url: "https://www.snapshotsportscam.com",
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1,
