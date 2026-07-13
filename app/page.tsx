@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { motion, useScroll, useSpring } from "motion/react";
 import { Camera, Zap, Share2, Video, Target, Sparkles, Mic, PenLine, Cloud, Check, X, ChevronDown } from "lucide-react";
+import { FaFacebookF, FaInstagram, FaXTwitter, FaTiktok } from "react-icons/fa6";
 
 export default function Home() {
   const { scrollYProgress } = useScroll();
@@ -35,7 +36,7 @@ export default function Home() {
           Auto-tracked.
         </h1>
         <p className="mb-10 max-w-2xl text-lg leading-relaxed text-ink-soft md:text-xl">
-          SnapShot uses AI to record, track, and clip your grassroots football matches — highlights and tactical breakdowns ready by full-time. One phone. Zero editing.
+          SnapShot uses AI to record, track, and clip your grassroots football matches — highlights and tactical breakdowns ready by full-time.
         </p>
         <div className="flex flex-col gap-3 sm:flex-row">
           <a href="#waitlist" className="rounded-full bg-brand px-8 py-4 font-display text-base font-semibold uppercase tracking-wider text-ink transition hover:bg-brand-hover">Join the Waitlist</a>
@@ -46,7 +47,7 @@ export default function Home() {
       {/* Value strip */}
       <section className="border-y border-line bg-card py-8">
         <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 px-6 md:grid-cols-3">
-          <ValueItem label="One phone, one match" sub="No expensive kit. No second operator." />
+          <ValueItem label="Handsfree mobile phone" sub="Mount it. Hit record. Coach the match." />
           <ValueItem label="Ready by full-time" sub="Highlights and clips waiting when the whistle blows." />
           <ValueItem label="Built for grassroots" sub="U8s to Sunday League. Not just the pros." />
         </div>
@@ -72,21 +73,21 @@ export default function Home() {
             n="01"
             icon={<Camera className="h-6 w-6" />}
             title="Record"
-            body="Prop up your phone pitchside and hit record. SnapShot captures the full match in 5-second segments so nothing is lost, even if the wifi drops."
+            body="Mount your phone pitchside and hit record. SnapShot captures the full match in 5-second segments so nothing is lost, even if the wifi drops."
             delay={0}
           />
           <Step
             n="02"
             icon={<Zap className="h-6 w-6" />}
             title="Track"
-            body="Our AI follows the ball across the pitch, auto-frames the action, and picks out every meaningful moment — goals, breaks, tackles, chances."
+            body="Get highlights and tactical clips ready before you leave the ground. Send them to players, coaches, and parents in one tap."
             delay={0.15}
           />
           <Step
             n="03"
             icon={<Share2 className="h-6 w-6" />}
             title="Share"
-            body="Get highlights and tactical clips ready before you leave the ground. Send them to players, coaches, and parents in one tap."
+            body="Players, coaches, and parents get instant access to every replay — no more waiting for files to be sent."
             delay={0.3}
           />
         </div>
@@ -219,7 +220,7 @@ export default function Home() {
             </div>
 
             <blockquote className="font-display text-2xl leading-relaxed text-ink md:text-3xl">
-              &ldquo;Grassroots football deserves the same tools the pros have. I built SnapShot because I was tired of coaches paying hundreds for analysis kits that were never designed for us. <span className="text-brand">One phone should be enough.</span>&rdquo;
+              &ldquo;Grassroots football deserves the same tools the pros have. I built SnapShot because I was tired of coaches paying hundreds for sports cameras that were never designed for us. <span className="text-brand">One phone should be enough.</span>&rdquo;
             </blockquote>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -242,7 +243,8 @@ export default function Home() {
         >
           <span className="mb-4 inline-block rounded-full border border-line bg-card px-4 py-1.5 font-display text-xs font-semibold uppercase tracking-widest text-ink-soft">The price problem</span>
           <h2 className="mx-auto max-w-3xl font-display text-4xl font-bold uppercase leading-tight tracking-tight text-ink md:text-6xl">
-            Match analysis costs <span className="text-brand">£1,000+ a season.</span> It shouldn&apos;t.
+            Match analysis costs <span className="text-brand">£1,000+ a season.</span><br />
+            It shouldn&apos;t.
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-ink-soft">
             The pros bought their hardware and locked in subscriptions. Grassroots coaches shouldn&apos;t have to. SnapShot uses the phone in your pocket — that&apos;s the whole idea.
@@ -337,7 +339,7 @@ export default function Home() {
         </motion.div>
 
         <p className="mt-8 text-center text-xs text-ink-muted">
-          Pricing indicative and accurate as of publication. Actual SnapShot pricing confirmed at launch. All trademarks belong to their respective owners.
+          Pricing indicative and accurate as of July 2026. Actual SnapShot pricing confirmed at launch. All trademarks belong to their respective owners.
         </p>
       </section>
 
@@ -360,11 +362,11 @@ export default function Home() {
           <FaqItem q="What phone do I need?" a="Any modern Android or iPhone from the last four years or so. SnapShot is built for phones like the Samsung Galaxy S22+ or iPhone 12+. The higher the camera quality, the better the tracked output — but it works with what you already have." />
           <FaqItem q="Do I need wifi at the pitch?" a="No. Recording happens on the phone locally. Uploads to the cloud happen in the background whenever you next have a wifi or mobile signal. Perfect for the middle-of-nowhere Sunday League pitches." />
           <FaqItem q="Will the battery last a full 90 minutes?" a="Yes on most modern phones. For tournaments or double-headers, a small power bank plugged in during play keeps you going indefinitely." />
-          <FaqItem q="What if I only have one phone?" a="Single-phone mode is the main experience. Prop it up on the sideline and go. There's also an optional two-phone mode for wider-angle panoramas if you want more of the pitch in frame." />
+          <FaqItem q="What if I only have one phone?" a="No worries — unlike other tracking apps, SnapShot works brilliantly as a standalone single-phone app. Mount your phone on the sideline and you're ready to go. There's also an optional two-phone mode if you want a wider panorama, but single-phone is the main experience." />
           <FaqItem q="Can I edit the highlights it makes?" a="Absolutely. Trim, rename, add voice notes, draw on frames, and stitch multiple clips together. Everything is customisable — SnapShot's job is to give you a great starting point, not lock you in." />
           <FaqItem q="Is my match footage private?" a="Yes, private by default. Only the team members you explicitly invite can view your matches. Nothing is shared publicly unless you choose to." />
-          <FaqItem q="Will there be a free tier?" a="Yes. A free tier will cover the essentials — recording, basic highlights, and personal use. Paid tiers unlock team features, extended cloud storage, and advanced analysis. Founding members get a discount on paid tiers for life." />
-          <FaqItem q="When does it launch?" a="Beta is targeted for late 2026 with a full launch shortly after. Join the waitlist and you'll be first to get access — plus a founding-member discount on paid plans." />
+         <FaqItem q="Is it free for players and parents?" a="Yes. Teams pay a small monthly fee, but the app is completely free for players and parents to access their team's highlights, clips, and full match footage. Only the coach or manager pays." />
+        <FaqItem q="When does it launch?" a="Beta is targeted for late 2026 with a full launch shortly after. Join the waitlist and you'll be first to use the app when we go live." />
         </div>
       </section>
 
@@ -382,7 +384,7 @@ export default function Home() {
             Be first on the pitch. <span className="text-brand">Join the waitlist.</span>
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg text-ink-soft">
-            Get the launch code, priority access, and a founding-member discount when SnapShot goes live.
+            Be the first to use SnapShot when we launch. Priority access and a launch-day heads-up.
           </p>
           <WaitlistForm />
           <p className="mt-4 text-xs text-ink-muted">No spam. Unsubscribe anytime. We&apos;ll email you once — when it&apos;s time.</p>
@@ -391,8 +393,24 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="border-t border-line bg-card py-10">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 md:flex-row">
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-6 md:flex-row">
           <Image src="/logo-wordmark.png" alt="SnapShot" width={130} height={32} />
+
+          <div className="flex items-center gap-3">
+            <a href="https://www.facebook.com/share/1AFEaMgJ2h/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="flex h-10 w-10 items-center justify-center rounded-full border border-line bg-bg text-ink-soft transition hover:border-brand hover:text-brand">
+              <FaFacebookF className="h-4 w-4" />
+            </a>
+            <a href="https://www.instagram.com/snapshotsportscamera" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="flex h-10 w-10 items-center justify-center rounded-full border border-line bg-bg text-ink-soft transition hover:border-brand hover:text-brand">
+              <FaInstagram className="h-4 w-4" />
+            </a>
+            <a href="#" aria-label="X (Twitter)" className="flex h-10 w-10 items-center justify-center rounded-full border border-line bg-bg text-ink-soft transition hover:border-brand hover:text-brand">
+              <FaXTwitter className="h-4 w-4" />
+            </a>
+            <a href="#" aria-label="TikTok" className="flex h-10 w-10 items-center justify-center rounded-full border border-line bg-bg text-ink-soft transition hover:border-brand hover:text-brand">
+              <FaTiktok className="h-4 w-4" />
+            </a>
+          </div>
+
           <div className="text-sm text-ink-muted">© 2026 SnapShot. Built for grassroots football.</div>
         </div>
       </footer>
