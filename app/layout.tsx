@@ -40,21 +40,12 @@ export const metadata: Metadata = {
     title: "SnapShot — AI video analysis for grassroots football",
     description:
       "Auto-tracked highlights, tactical clips, and coaching insights from a single phone. Built for grassroots coaches.",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "SnapShot — AI video analysis for grassroots football",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "SnapShot — AI video analysis for grassroots football",
     description:
       "Auto-tracked highlights, tactical clips, and coaching insights from a single phone. Built for grassroots coaches.",
-    images: ["/og-image.png"],
   },
   robots: {
     index: true,
