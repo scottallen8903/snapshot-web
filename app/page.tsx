@@ -357,10 +357,10 @@ export default function Home() {
             <a href="https://www.instagram.com/snapshotsportscamera" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="flex h-10 w-10 items-center justify-center rounded-full border border-line bg-bg text-ink-soft transition hover:border-brand hover:text-brand">
               <FaInstagram className="h-4 w-4" />
             </a>
-            <a href="#" aria-label="X (Twitter)" className="flex h-10 w-10 items-center justify-center rounded-full border border-line bg-bg text-ink-soft transition hover:border-brand hover:text-brand">
+            <a href="https://www.x.com/snapshotcam" aria-label="X (Twitter)" className="flex h-10 w-10 items-center justify-center rounded-full border border-line bg-bg text-ink-soft transition hover:border-brand hover:text-brand">
               <FaXTwitter className="h-4 w-4" />
             </a>
-            <a href="#" aria-label="TikTok" className="flex h-10 w-10 items-center justify-center rounded-full border border-line bg-bg text-ink-soft transition hover:border-brand hover:text-brand">
+            <a href="https://www.tiktok.com/@snapshotsportscam?_r=1&_t=ZN-983hcIR8EmE" aria-label="TikTok" className="flex h-10 w-10 items-center justify-center rounded-full border border-line bg-bg text-ink-soft transition hover:border-brand hover:text-brand">
               <FaTiktok className="h-4 w-4" />
             </a>
           </div>
